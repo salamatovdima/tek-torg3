@@ -14,12 +14,12 @@ CREATE TABLE `books`(
     FOREIGN KEY(author_id) REFERENCES authors(id) ON DELETE CASCADE
 );
 
-TRUNCATE TABLE `books`;
-
 INSERT INTO authors (name) VALUES('Первый');
 INSERT INTO authors (name) VALUES('Второй');
 INSERT INTO authors (name) VALUES('Третий');
 
+
+#### DEBUG ###
 
 TRUNCATE TABLE `books`;
 SET @id=(SELECT id FROM authors WHERE name="Первый");
